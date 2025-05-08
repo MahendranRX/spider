@@ -1,0 +1,8 @@
+pinecone==5.4.2
+langchain==0.3.17
+langchain-community==0.3.16
+langchain-pinecone==0.2.2
+streamlit==1.41.1
+python-dotenv==1.0.1
+pypdf==5.2.0
+cohere==5.14.2

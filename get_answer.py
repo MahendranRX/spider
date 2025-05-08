@@ -1,17 +1,13 @@
 from langchain_pinecone import PineconeVectorStore
 from langchain_community.llms.cohere import Cohere
 from store_data import get_embeddings
-# import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
 
 load_dotenv()
 
-# GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 COHERE_API_KEY = os.environ.get('COHERE_API_KEY')
-
-# genai.configure(api_key=GEMINI_API_KEY)
 
 
 def get_answer(question):
@@ -69,5 +65,4 @@ def get_answer(question):
 
     response = llm.generate(prompts=prompt)
 
-    print(response.generations)
     return response.generations[0][0].text.strip()
